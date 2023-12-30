@@ -1,0 +1,28 @@
+$ tesseract image_path stdout
+
+To write the output text in a file:
+
+$ tesseract image_path text_result.txt
+
+To specify the language model name, write language shortcut after -l flag, by default it takes English language:
+
+$ tesseract image_path text_result.txt -l eng
+
+By default, Tesseract expects a page of text when it segments an image. If you're just seeking to OCR a small region, try a different segmentation mode, using the --psm argument. There are 14 modes available which can be found here. By default, Tesseract fully automates the page segmentation but does not perform orientation and script detection. To specify the parameter, type the following:
+
+$ tesseract image_path text_result.txt -l eng --psm 6
+
+0    Orientation and script detection (OSD) only.
+1    Automatic page segmentation with OSD.
+2    Automatic page segmentation, but no OSD, or OCR.
+3    Fully automatic page segmentation, but no OSD. (Default)
+4    Assume a single column of text of variable sizes.
+5    Assume a single uniform block of vertically aligned text.
+6    Assume a single uniform block of text.
+7    Treat the image as a single text line.
+8    Treat the image as a single word.
+9    Treat the image as a single word in a circle.
+10    Treat the image as a single character.
+11    Sparse text. Find as much text as possible in no particular order.
+12    Sparse text with OSD.
+13    Raw line. Treat the image as a single text line, bypassing hacks that are Tesseract-specific

@@ -1,0 +1,36 @@
+scrapy startproject 
+
+    cd scrapytutorial
+    scrapy genspider example example.com
+    
+    fetch − It fetches the URL using Scrapy downloader.
+
+runspider − It is used to run self-contained spider without creating a project.
+
+settings − It specifies the project setting value.
+
+shell − It is an interactive scraping module for the given URL.
+
+startproject − It creates a new Scrapy project.
+
+version − It displays the Scrapy version.
+
+view − It fetches the URL using Scrapy downloader and show the contents in a browser.
+
+You can have some project related commands as listed −
+
+crawl − It is used to crawl data using the spider.
+
+check − It checks the items returned by the crawled command.
+
+list − It displays the list of available spiders present in the project.
+
+edit − You can edit the spiders by using the editor.
+
+scrapy genspider chocolatespider chocolate.co.uk
+scrapy crawl first_scrapy -a group = accessories
+
+
+parse − It parses the given URL with the spider.
+
+bench − It is used to run quick benchmark test (Benchmark tells how many number of pages can be crawled per minute by Scrapy).
